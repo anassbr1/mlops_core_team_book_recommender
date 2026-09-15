@@ -1,0 +1,64 @@
+# ═══════════════════════════════════════════════════════════════════
+# .gitignore — MLOps Core Team Book Recommender
+# ═══════════════════════════════════════════════════════════════════
+# ⚠️ IMPORTANT : On garde data/raw/*.csv (nécessaires au pipeline)
+# ═══════════════════════════════════════════════════════════════════
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# --- DuckDB (fichier régénérable, ~1 GB potentiel) ---
+data/*.duckdb
+data/*.duckdb.wal
+data/.dlt/
+
+# --- dlt ---
+**/.dlt/
+.dlt/
+
+# --- dbt ---
+dataops/dbt_project/book_transform/target/
+dataops/dbt_project/book_transform/dbt_packages/
+dataops/dbt_project/book_transform/logs/
+dataops/dbt_project/book_transform/.user.yml
+dataops/dbt_project/book_transform/package-lock.yml
+
+# --- Dagster ---
+dataops/dagster_project/book_pipeline/storage/
+dataops/dagster_project/book_pipeline/.dagster/
+dataops/dagster_project/book_pipeline/tmp*/
+dataops/dagster_project/book_pipeline/*.tmp
+
+# --- MLflow (à venir) ---
+mlruns/
+mlartifacts/
+mlflow_data/
+*.db
+
+# --- Modèles ML (fichiers lourds) ---
+mlops/models/*.pkl
+mlops/models/*.joblib
+mlops/models/*.h5
+mlops/training/data/*.csv
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Logs ---
+*.log
+
+# --- Notebooks checkpoints ---
+.ipynb_checkpoints/

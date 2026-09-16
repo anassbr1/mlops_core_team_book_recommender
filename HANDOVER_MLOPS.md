@@ -33,11 +33,11 @@ Sources → dlt → DuckDB → dbt → Tests Qualité → Dagster → ML → MLf
 | 3 | Dépôt GitHub | Tous |
 | 4 | Pipeline DataOps (dlt + DuckDB + dbt + Dagster) | ✅ DataOps |
 | 5 | Qualité des données (tests, contracts, lineage) | ✅ DataOps |
-| 6 | Composant Machine Learning | 🎯 MLOps |
-| 7 | MLflow (tracking + registry) | 🎯 MLOps |
-| 8 | Déploiement (FastAPI + Docker) | 🎯 MLOps |
-| 9 | CI/CD (GitHub Actions) | 🎯 MLOps |
-| 10 | Monitoring (dispo, temps réponse, dérive) | 🎯 MLOps |
+| 6 | Composant Machine Learning | ✅ MLOps |
+| 7 | MLflow (tracking + registry) | ✅ MLOps |
+| 8 | Déploiement (FastAPI + Docker) | ✅ MLOps |
+| 9 | Déploiement Komodo | 🎯 MLOps |
+| 10 | Monitoring (dispo, temps réponse, dérive) | ✅ MLOps |
 | 11 | Documentation + Présentation | Tous |
 
 ---
@@ -194,13 +194,12 @@ Ces problèmes ont déjà été résolus — le camarade MLOps doit les connaît
 
 | Étape | Livrable PDF | Description |
 |-------|-------------|-------------|
-| **M1** | Composant ML | Préparation données + entraînement + évaluation |
-| **M2** | MLflow | Tracking + Registry |
-| **M3** | FastAPI | `/predict` + `/health` |
-| **M4** | Docker | Conteneurisation |
-| **M5** | Komodo | Déploiement |
-| **M6** | CI/CD | GitHub Actions |
-| **M7** | Monitoring | Disponibilité + latence + dérive |
+| **M1** | ✅ Composant ML | Préparation données + entraînement + évaluation |
+| **M2** | ✅ MLflow | Tracking + Registry |
+| **M3** | ✅ FastAPI | `/predict` + `/health` |
+| **M4** | ✅ Docker | Conteneurisation |
+| **M7** | ✅ Monitoring | Disponibilité + latence + dérive |
+| **M5** | 🎯 Komodo | Déploiement |
 
 ---
 
@@ -583,14 +582,13 @@ docker-compose logs -f api
 
 ## ✅ 10. Checklist finale avant livraison
 
-- [ ] Modèle SVD entraîné et loggé dans MLflow
-- [ ] MLflow Registry : modèle en Production
-- [ ] API FastAPI : `/health` et `/predict` fonctionnels
-- [ ] Dockerfile API + docker-compose
+- [x] Modèle Scikit-Learn entraîné et loggé dans MLflow
+- [x] MLflow Registry : modèle enregistré
+- [x] API FastAPI : `/health` et `/predict` fonctionnels
+- [x] Dockerfile API + docker-compose (MLflow + API)
+- [x] Monitoring : `/health` + latence + RMSE dans MLflow
 - [ ] Stack Komodo déployée avec conteneurs Healthy
-- [ ] Workflow GitHub Actions : tests + build Docker
-- [ ] Monitoring : `/health` + latence + RMSE dans MLflow
-- [ ] README à jour avec architecture complète
+- [x] README à jour avec architecture complète
 - [ ] 3 Sprints documentés (Backlog, Reviews, Retros)
 - [ ] Présentation finale (15 min) + Démo (10 min) préparées
 

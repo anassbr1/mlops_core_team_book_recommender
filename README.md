@@ -60,13 +60,13 @@ cd dataops/dbt_project/book_transform
 dbt test
 Tests : unique, not_null, accepted_values, relationships.
 
-🎯 Prochaines étapes (MLOps)
-□ MLflow : tracking + registry
-□ Entraînement SVD (scikit-surprise)
-□ FastAPI (/predict, /health)
-□ Docker + Komodo
-□ GitHub Actions (CI/CD)
-□ Monitoring
+🎯 État MLOps
+✅ Entraînement Modèle (scikit-learn)
+✅ MLflow : tracking + registry
+✅ FastAPI (/predict, /health)
+✅ Dockerisation locale
+✅ Monitoring (temps de réponse et disponibilité)
+□ Déploiement sur Komodo
 👥 Équipe
 MLOps Core Team — Projet Master 1ère année S2.
 
@@ -84,14 +84,13 @@ DATAOPS ✅✅✅✅✅✅✅✅ 100%
 ├── Dagster ✅
 └── README+gitignore ← 2 min, il te reste ça
 
-MLOPS ⬜⬜⬜⬜⬜⬜⬜⬜ 0%
-├── MLflow ⬜
-├── Entraînement SVD ⬜
-├── FastAPI ⬜
-├── Docker ⬜
-├── Komodo ⬜
-├── GitHub Actions ⬜
-└── Monitoring ⬜
+MLOPS ✅✅✅✅✅✅⬜⬜ 80%
+├── Entraînement Scikit-Learn ✅
+├── MLflow (Tracking & Registry) ✅
+├── FastAPI (API Rest) ✅
+├── Docker (Compose) ✅
+├── Monitoring ✅
+└── Komodo ⬜
 
 text
 
